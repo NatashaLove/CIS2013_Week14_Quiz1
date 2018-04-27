@@ -63,7 +63,7 @@ class MineSweeper: public Game {
 		cout<< endl;
 		
 		for (int i = 0; i < y; i++) {
-			m[i] = new unsigned char[x];
+			m[i] = new unsigned char[x]; // one item of array y [i] is equal to an array of x items.
 			//m is now a y by x array. x - width, y - height
 		}
 			
@@ -115,7 +115,9 @@ class MineSweeper: public Game {
 	cout << endl;
 	}
 	
-	 void print(unsigned char** board, int x, int y){
+	
+	// Трудности с функцикией печати поля..
+	 void print(unsigned char** m, int x, int y){
 
 		cout << '\t';
 		for (int a = 0; a < x; a++)
@@ -129,7 +131,7 @@ class MineSweeper: public Game {
 			cout << i << '\t';
 			for (int j = 0; j < x;j++)
 			{
-				cout << board[i][j] << ' ';
+				cout << m[i][j] << ' ';
 			}
 			cout << '\n';
 		}
@@ -152,7 +154,7 @@ class MineSweeper: public Game {
 
 int main(){
 	string n;
-	unsigned char m;
+	//unsigned char m [e] [f];
 	int x,y;
 	//Game game;
 	cout << " What is the game you wanna play? ";
@@ -165,7 +167,7 @@ int main(){
 	//game.setScore ();
 	
 	//cout << "your score is " << game.getScore () << endl;
-	minesweeper.print(m, x, y);
+//	minesweeper.print(m [e] [f], x, y);
 	
 	
 	return 0;
